@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/board/view.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <table>
+        <colgroup>
+          <col width="10%" />
+          <col width="*" />
+          <col width="10%" />
+          <col width="20%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>제목</th>
+            <td>{{obj.subject}}</td>
+            <th>작성자</th>
+            <td>{{obj.writer}}</td>
+          </tr>
+          <tr>
+            <th>작성일</th>
+            <td>{{obj.registerDate}}</td>
+            <th>조회수</th>
+            <td>{{obj.hit}}</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4">{{obj.content}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="bottom">
+        <a href="/board/modify?index={{obj.idx}}">수정</a>
+        <a href="/board/delete?index={{obj.idx}}">삭제</a>
+        <a href="/board/list">목록</a>
+      </div>
+    </div>
+  </body>
+</html>
